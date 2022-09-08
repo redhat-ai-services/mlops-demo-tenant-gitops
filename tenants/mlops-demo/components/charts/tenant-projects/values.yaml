@@ -1,0 +1,6 @@
+mlops-demo-tenant:
+  fullnameOverride: mlops-demo
+
+  adminGroup:
+    members:
+      - opentlc-mgr

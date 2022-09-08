@@ -1,0 +1,13 @@
+apiVersion: v2
+name: tenant-projects
+description: A Helm chart for Kubernetes
+
+type: application
+
+version: 0.1.0
+
+dependencies:
+  - name: "ml-gitops-tenant"
+    version: "0.2.0"
+    repository: "https://rh-intelligent-application-practice.github.io/helm-charts/"
+    alias: mlops-demo-tenant
