@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlops-demo-tenant-app-of-apps
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: mlops-demo-tenant
+  source:
+    path: patch-me-see-overlays
+    repoURL: patch-me-see-clusters-overlays
+    targetRevision: patch-me-see-clusters-overlays
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
