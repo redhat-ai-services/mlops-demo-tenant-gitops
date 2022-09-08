@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - mlops-demo-tenant-app-of-apps.yaml
+  - mlops-demo-tenant-projects.yaml
