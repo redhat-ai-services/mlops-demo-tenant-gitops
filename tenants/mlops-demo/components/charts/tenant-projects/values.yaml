@@ -4,3 +4,4 @@ mlops-demo-tenant:
   adminGroup:
     members:
       - opentlc-mgr
+      - user1
