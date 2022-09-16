@@ -2,6 +2,7 @@
 set -e
 
 BOOTSTRAP_DIR="bootstrap/overlays/default/"
+ARGO_NS=openshift-gitops
 
 # check login
 check_oc_login(){
