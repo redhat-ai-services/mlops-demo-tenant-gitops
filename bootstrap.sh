@@ -14,7 +14,7 @@ check_oc_login(){
 
 main(){
     echo "Applying overlay: ${BOOTSTRAP_DIR}"
-    kustomize build ${bootstrap_dir} | oc apply -f -
+    kustomize build ${BOOTSTRAP_DIR} | oc apply -f -
 
     echo ""
     echo "Deploying tenant instance.  Check the status of the sync here:
