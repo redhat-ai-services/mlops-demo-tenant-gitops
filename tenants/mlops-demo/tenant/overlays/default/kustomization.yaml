@@ -7,14 +7,14 @@ bases:
   - ../../base
 
 patches:
-  - path: patch-application-repo-revision.yaml
-    target:
+  - target:
       group: argoproj.io
       version: v1alpha1
       kind: Application
+    path: patch-application-repo-revision.yaml
   # Uncomment patches to disable automatic sync
-  # - path: patch-application-manual-sync.yaml
-  #   target:
+  # - target:
   #     group: argoproj.io
   #     version: v1alpha1
   #     kind: Application
+  #   path: patch-application-manual-sync.yaml
