@@ -1,5 +1,5 @@
 argocd:
-  nameOverride: argocd
+  fullnameOverride: argocd
   rbac:
     policy: |-
       g, system:cluster-admins, role:admin
