@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlops-demo-tenant-argocd
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+  project: mlops-demo-tenant
+  source:
+    path: tenants/mlops-demo/components/charts/argocd-instance
+    repoURL: patch-me-see-tenant-overlays
+    targetRevision: patch-me-see-tenant-overlays
+  syncPolicy:
+    automated:
+      selfHeal: true
