@@ -1,0 +1,26 @@
+argocd:
+  rbac:
+    policy: |-
+      g, system:cluster-admins, role:admin
+      g, mlops-demo-admins, role:admin
+  projects:
+    - name: mlops-demo-dev
+      destinations:
+        - server: https://kubernetes.default.svc
+          namespace: mlops-demo-dev
+    - name: mlops-demo-test
+      destinations:
+        - server: https://kubernetes.default.svc
+          namespace: mlops-demo-test
+    - name: mlops-demo-prod
+      destinations:
+        - server: https://kubernetes.default.svc
+          namespace: mlops-demo-prod
+    - name: mlops-demo-pipelines
+      destinations:
+        - server: https://kubernetes.default.svc
+          namespace: mlops-demo-pipelines
+    - name: mlops-demo-datascience
+      destinations:
+        - server: https://kubernetes.default.svc
+          namespace: mlops-demo-datascience
