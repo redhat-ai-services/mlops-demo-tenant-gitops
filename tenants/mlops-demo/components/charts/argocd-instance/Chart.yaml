@@ -8,5 +8,5 @@ version: 0.1.0
 
 dependencies:
   - name: "argocd"
-    version: "0.3.5"
+    version: "0.3.6"
     repository: "https://strangiato.github.io/helm-charts/"
