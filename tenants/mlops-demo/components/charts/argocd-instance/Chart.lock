@@ -1,6 +1,0 @@
-dependencies:
-- name: argocd
-  repository: https://strangiato.github.io/helm-charts/
-  version: 0.3.6
-digest: sha256:0b02897270defbd12233f61facacfaf2c8b38ff3f7aa1a9ead6e27f09d5669d9
-generated: "2022-11-09T17:27:26.474662784-06:00"
