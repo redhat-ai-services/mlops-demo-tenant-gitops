@@ -1,5 +1,7 @@
 argocd:
   fullnameOverride: argocd
+  extraConfig:
+    accounts.pipeline: apiKey
   rbac:
     policy: |-
       g, system:cluster-admins, role:admin
