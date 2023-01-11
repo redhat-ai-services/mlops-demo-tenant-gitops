@@ -6,6 +6,36 @@ gitops-tenant:
       - opentlc-mgr
       - user1
 
+  namespaces:
+    - nameSuffix: gitops
+      role: gitops
+      adminGroupRole: admin
+    - nameSuffix: pipelines
+      role: pipelines
+      adminGroupRole: admin
+      annotations:
+        operator.tekton.dev/prune.resources: "taskrun, pipelinerun"
+        operator.tekton.dev/prune.keep-since: "7200"
+    - nameSuffix: datascience
+      role: dev
+      adminGroupRole: admin
+      createOperatorGroup: true
+    - nameSuffix: dev
+      role: dev
+      nameOverride: ""
+      adminGroupRole: admin
+      createOperatorGroup: true
+    - nameSuffix: test
+      role: test
+      nameOverride: ""
+      adminGroupRole: view
+      createOperatorGroup: true
+    - nameSuffix: prod
+      role: prod
+      nameOverride: ""
+      adminGroupRole: view
+      createOperatorGroup: true
+
   additionalRoles:
     - name: sealed-secrets-deployer
       subject:
