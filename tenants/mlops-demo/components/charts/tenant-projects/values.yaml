@@ -53,19 +53,3 @@ gitops-tenant:
             - 'bitnami.com'
           resources:
             - 'sealedsecrets'
-    - name: operator-deployer
-      subject:
-        name: argocd-argocd-application-controller
-      rules:
-        - verbs:
-            - get
-            - list
-            - watch
-            - create
-            - update
-            - patch
-            - delete
-          apiGroups:
-            - 'operators.coreos.com'
-          resources:
-            - 'OperatorGroups'
