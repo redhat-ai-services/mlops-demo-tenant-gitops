@@ -5,3 +5,37 @@ mlops-demo-tenant:
     members:
       - opentlc-mgr
       - user1
+
+additionalRoles:
+  - name: sealed-secrets-deployer
+    subject:
+      name: argocd-argocd-application-controller
+    rules:
+      - verbs:
+          - get
+          - list
+          - watch
+          - create
+          - update
+          - patch
+          - delete
+        apiGroups:
+          - 'bitnami.com'
+        resources:
+          - 'sealedsecrets'
+  - name: operatorgroup-deployer
+    subject:
+      name: argocd-argocd-application-controller
+    rules:
+      - verbs:
+          - get
+          - list
+          - watch
+          - create
+          - update
+          - patch
+          - delete
+        apiGroups:
+          - 'operators.coreos.com'
+        resources:
+          - 'OperatorGroup'
