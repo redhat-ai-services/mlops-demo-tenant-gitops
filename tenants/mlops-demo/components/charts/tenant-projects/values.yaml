@@ -38,4 +38,4 @@ gitops-tenant:
           apiGroups:
             - 'operators.coreos.com'
           resources:
-            - 'OperatorGroup'
+            - 'OperatorGroups'
