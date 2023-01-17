@@ -1,7 +1,5 @@
 argocd:
   fullnameOverride: argocd
-  extraConfig:
-    accounts.pipeline: apiKey
   rbac:
     policy: |-
       g, system:cluster-admins, role:admin
@@ -27,3 +25,6 @@ argocd:
       destinations:
         - server: https://kubernetes.default.svc
           namespace: mlops-demo-datascience
+  pipelineAccounts:
+    - name: pipelines
+      namespace: mlops-demo-pipelines
