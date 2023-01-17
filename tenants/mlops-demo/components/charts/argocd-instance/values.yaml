@@ -4,6 +4,8 @@ argocd:
     policy: |-
       g, system:cluster-admins, role:admin
       g, mlops-demo-admins, role:admin
+      g, pipeline, role:admin
+    scopes: "[accounts,groups]"
   projects:
     - name: mlops-demo-dev
       destinations:
