@@ -31,7 +31,7 @@ argocd:
     - name: pipeline
       namespace: mlops-demo-pipelines
 
-  resourceCustomizations: |
+  resourceCustomizations:
     machinelearning.seldon.io/SeldonDeployment:
         health.lua: |
           health_status = {}
