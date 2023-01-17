@@ -26,5 +26,5 @@ argocd:
         - server: https://kubernetes.default.svc
           namespace: mlops-demo-datascience
   pipelineAccounts:
-    - name: pipelines
+    - name: pipeline
       namespace: mlops-demo-pipelines
