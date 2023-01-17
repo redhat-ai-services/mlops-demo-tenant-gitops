@@ -34,7 +34,7 @@ argocd:
 resourceCustomizations: |
   machinelearning.seldon.io/SeldonDeployment:
       health.lua: |
-        hs = {}
+        health_status = {}
         if obj.status ~= nil then
           if obj.status.conditions ~= nil then
             numConditions = 0
@@ -62,6 +62,6 @@ resourceCustomizations: |
           end
         end
 
-        hs.status = "Progressing"
-        hs.message = "Waiting for SeldonDeployment"
-        return hs
+        health_status.status = "Progressing"
+        health_status.message = "Waiting for SeldonDeployment"
+        return health_status
