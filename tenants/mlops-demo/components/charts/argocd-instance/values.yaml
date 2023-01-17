@@ -54,7 +54,7 @@ argocd:
                 health_status.status = "Healthy"
                 health_status.message = "SeldonDeployment is healthy"
                 return health_status
-              else numFalse > 0 then
+              else
                 health_status.status = "Progressing"
                 health_status.message = message
                 return health_status
