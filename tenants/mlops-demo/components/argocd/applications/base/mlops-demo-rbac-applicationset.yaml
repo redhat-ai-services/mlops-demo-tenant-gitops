@@ -26,9 +26,8 @@ spec:
       name: '{{values.name}}'
     spec:
       destination:
-        namespace: '{{values.namespace}}'
         server: https://kubernetes.default.svc
-      project: '{{values.project}}'
+      project: mlops-demo-tenant
       source:
         path: mlops-demo-tenant
         repoURL: patch-me-see-tenant-overlays
