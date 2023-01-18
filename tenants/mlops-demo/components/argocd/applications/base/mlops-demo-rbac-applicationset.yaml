@@ -29,7 +29,7 @@ spec:
         server: https://kubernetes.default.svc
       project: mlops-demo-tenant
       source:
-        path: mlops-demo-tenant
+        path: '{{values.path}}'
         repoURL: patch-me-see-tenant-overlays
         targetRevision: patch-me-see-tenant-overlays
       syncPolicy:
