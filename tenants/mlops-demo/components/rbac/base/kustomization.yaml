@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - grafana-cluster-viewer-rbac.yaml
+  - pipeline-viewer-rbac.yaml

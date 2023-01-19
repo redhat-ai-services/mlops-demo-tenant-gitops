@@ -1,6 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+namespace: mlops-demo-dev
+
 namePrefix: mlops-demo-dev-
 
 bases:
@@ -12,3 +14,9 @@ patches:
       kind: ClusterRoleBinding
       name: cluster-monitoring-view
     path: patch-subject-namespace.yaml
+  - target:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      name: pipeline-view
+    path: patch-subject-namespace.yaml
+
