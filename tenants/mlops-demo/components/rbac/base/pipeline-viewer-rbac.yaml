@@ -9,4 +9,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: pipeline
-    namespace: patch-me
+    namespace: mlops-demo-pipelines
