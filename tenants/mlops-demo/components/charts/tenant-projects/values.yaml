@@ -69,3 +69,5 @@ gitops-tenant:
             - 'integreatly.org'
           resources:
             - 'grafanadatasources'
+            - 'grafanas'
+            - 'grafanadashboards'
