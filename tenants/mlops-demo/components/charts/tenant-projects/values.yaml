@@ -68,4 +68,6 @@ gitops-tenant:
           apiGroups:
             - 'integreatly.org'
           resources:
+            - 'grafanadatasources'
             - 'grafanas'
+            - 'grafanadashboards'
