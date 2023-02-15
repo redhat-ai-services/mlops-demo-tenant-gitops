@@ -3,20 +3,21 @@ kind: Kustomization
 
 namespace: openshift-gitops
 
-bases:
+resources:
   - ../../base
 
 patches:
   - path: patch-applicationset-repo-revision.yaml
     target:
       group: argoproj.io
-      version: v1alpha1
       kind: ApplicationSet
-  - target:
-      group: argoproj.io
       version: v1alpha1
+  - path: patch-application-repo-revision.yaml
+    target:
+      group: argoproj.io
       kind: Application
-    path: patch-application-repo-revision.yaml
+      version: v1alpha1
+
   # Uncomment patches to disable automatic sync
   # - target:
   #     group: argoproj.io
