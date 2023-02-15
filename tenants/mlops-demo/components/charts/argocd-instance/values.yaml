@@ -66,8 +66,8 @@ argocd:
         health_status.message = "Waiting for SeldonDeployment"
         return health_status
 
-  resourceExclusions: |
-    - apiGroups:
+  resourceExclusions:
+    - apiGroups: 
       - tekton.dev
       clusters:
       - '*'
