@@ -5,12 +5,12 @@ namespace: mlops-demo-prod
 
 namePrefix: mlops-demo-prod-
 
-bases:
+resources:
   - ../../base
 
 patches:
-  - target:
+  - path: patch-subject-namespace.yaml
+    target:
       group: rbac.authorization.k8s.io
       kind: ClusterRoleBinding
       name: cluster-monitoring-view
-    path: patch-subject-namespace.yaml
