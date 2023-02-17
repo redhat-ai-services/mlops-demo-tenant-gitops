@@ -36,4 +36,4 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 subjects:
   - kind: ServiceAccount
-    name: tekton-tekton-
+    name: tektoncleaner
