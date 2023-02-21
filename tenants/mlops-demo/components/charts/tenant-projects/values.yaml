@@ -86,6 +86,7 @@ gitops-tenant:
             - delete
           apiGroups:
             - 'tekton.dev'
+            - 'pipelineruns.tekton.dev'
           resources:
             - 'pipelinerun'
             - 'pipeline'
