@@ -14,7 +14,7 @@ gitops-tenant:
       role: pipelines
       adminGroupRole: admin
       annotations:
-        operator.tekton.dev/prune.resources: "taskrun, pipelinerun"
+        operator.tekton.dev/prune.resources: "pipelinerun"
         operator.tekton.dev/prune.keep-since: "1"
         operator.tekton.dev/prune.strategy: "keep-since"
     - nameSuffix: datascience
