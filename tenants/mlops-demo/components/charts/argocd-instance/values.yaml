@@ -68,8 +68,8 @@ argocd:
 
   resourceExclusions:
     - apiGroups: 
-      - tekton.dev
+        - tekton.dev
       clusters:
-      - '*'
+        - '*'
       kinds:
-      - TaskRun
+        - TaskRun
