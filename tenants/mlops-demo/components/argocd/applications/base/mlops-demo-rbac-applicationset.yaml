@@ -9,6 +9,11 @@ spec:
           - cluster: local
             url: https://kubernetes.default.svc
             values:
+              name: mlops-demo-tenant-rbac-datascience
+              path: tenants/mlops-demo/components/rbac/overlays/datascience
+          - cluster: local
+            url: https://kubernetes.default.svc
+            values:
               name: mlops-demo-tenant-rbac-dev
               path: tenants/mlops-demo/components/rbac/overlays/dev
           - cluster: local
