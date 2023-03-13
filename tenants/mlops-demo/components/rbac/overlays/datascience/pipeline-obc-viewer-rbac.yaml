@@ -4,12 +4,12 @@ kind: Role
 metadata:
   name: obc-view
 rules:
-- apiGroups: [""]
-  resources: ["secrets", "configmaps"]
-  verbs: ["get", "watch", "list"]
-- apiGroups: ["objectbucket.io"]
-  resources: ["objectbucketclaims"]
-  verbs: ["get", "watch", "list"]
+  - apiGroups: [""]
+    resources: ["secrets", "configmaps"]
+    verbs: ["get", "watch", "list"]
+  - apiGroups: ["objectbucket.io"]
+    resources: ["objectbucketclaims"]
+    verbs: ["get", "watch", "list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
