@@ -67,7 +67,7 @@ argocd:
         return health_status
 
   resourceExclusions:
-    - apiGroups: 
+    - apiGroups:
         - tekton.dev
       clusters:
         - '*'
