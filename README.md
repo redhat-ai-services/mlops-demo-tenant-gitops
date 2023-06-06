@@ -4,7 +4,7 @@ The primary goal of this repo is to create the tenant environment. A tenant is g
 
 This repo creates an opinionated way for deploying and managing resources for a multi-tiered deployment of application components.
 
-This repo is designed to be used alongside the [openshift-cluster-bootstrap-gitops](https://github.com/rh-intelligent-application-practice/openshift-cluster-bootstrap-gitops) repo. Like the openshift-cluster-bootstrap-gitops repo this repo is intended to deploy cluster level configurations but instead focuses on components that are specific to the MLOps Demo that are generally in the scope of a Cluster Admin.
+This repo is designed to be used alongside the [openshift-cluster-bootstrap-gitops](https://github.com/rh-datascience-and-edge-practice/openshift-cluster-bootstrap-gitops) repo. Like the openshift-cluster-bootstrap-gitops repo this repo is intended to deploy cluster level configurations but instead focuses on components that are specific to the MLOps Demo that are generally in the scope of a Cluster Admin.
 
 ## Prerequisites
 
