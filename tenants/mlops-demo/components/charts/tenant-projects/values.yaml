@@ -3,6 +3,7 @@ gitops-tenant:
 
   adminGroup:
     members:
+      - admin
       - opentlc-mgr
       - user1
 
