@@ -17,25 +17,39 @@ gitops-tenant:
       annotations:
         operator.tekton.dev/prune.resources: "taskrun, pipelinerun"
         operator.tekton.dev/prune.keep-since: "0"
+      labels:
+        opendatahub.io/dashboard: 'true'
     - nameSuffix: datascience
       role: dev
       adminGroupRole: admin
       createOperatorGroup: true
+      labels:
+        modelmesh-enabled: 'true'
+        opendatahub.io/dashboard: 'true'
     - nameSuffix: dev
       role: dev
       nameOverride: ""
       adminGroupRole: admin
       createOperatorGroup: true
+      labels:
+        modelmesh-enabled: 'true'
+        opendatahub.io/dashboard: 'true'
     - nameSuffix: test
       role: test
       nameOverride: ""
       adminGroupRole: view
       createOperatorGroup: true
+      labels:
+        modelmesh-enabled: 'true'
+        opendatahub.io/dashboard: 'true'
     - nameSuffix: prod
       role: prod
       nameOverride: ""
       adminGroupRole: view
       createOperatorGroup: true
+      labels:
+        modelmesh-enabled: 'true'
+        opendatahub.io/dashboard: 'true'
 
   additionalRoles:
     - name: sealed-secrets-deployer
