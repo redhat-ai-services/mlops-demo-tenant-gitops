@@ -5,6 +5,7 @@ gitops-tenant:
     members:
       - admin
       - opentlc-mgr
+      - kubeadmin
       - user1
 
   namespaces:
